@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <p id="description">After adding user details in form if we click on submit then details are adding into below table.</p>
+    <h1 id="title">User Details :</h1>
+    <form id="form">
+        <h4>Firstname :</h4> <input  type="text" id="first-name" onchange="output1(event,'firstname')" value="" required/><br />
+        <h4>Lastname :</h4> <input  type="text" id="last-name" onchange="output1(event,'lastname')" value="" required/><br />
+        <h4>Address :</h4> <input  type="text" id="address" onchange="output1(event,'address')" value="" required/><br />
+        <h4>pincode :</h4> <input  type="text" id="pincode" onchange="output1(event,'pincode')" value="" required/><br />
+        <h4>Gender :</h4> <input type="radio" id="gender" name="gender" value="Male" onclick="output1(event,'gender')"/><label for="male">Male</label> <input type="radio" id="gender" name="gender" value="Female" onclick="output1(event,'gender')" /><label for="gender" >Female</label><br />
+        <h4>State : </h4> <input type="text" id="state" onchange="output1(event,'state')" /><br />
+        <h4>Country :</h4> <input type="text" id="country" onchange="output1(event,'country')" /><br />
+        <h4>Choose your favourite food : <span>(PLease select atleast 2 items)</span></h4>
+        <input type="checkbox" id="fooditems" onclick="checkbox(event)" value="Biryani"/><label for="foods" >Biryani</label>
+        <input type="checkbox" id="fooditems" onclick="checkbox(event)" value="Sambar Dosa" /><label for="foods">Sambar Idli</label>
+        <input type="checkbox" id="fooditems" onclick="checkbox(event)" value="Pizza" /><label for="foods">Pizza</label>
+        <input type="checkbox" id="fooditems" onclick="checkbox(event)" value="Paya soup" /><label for="foods">Paya soup</label>
+        <input type="checkbox" id="fooditems" onclick="checkbox(event)" value="Chicken Pakodi" /><label for="foods">Chicken Pakodi</label>
+        <br />
+        <input  type="reset" id="button"  onclick="table1()" value="Submit" required/><br />
+    </form>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Pincode</th>
+                <th>Gender</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>Food Items</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+    <script src="form.js"></script>
+    
+</body>
+</html>
