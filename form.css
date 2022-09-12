@@ -23,7 +23,41 @@ table,th,td{
     border: 2px solid black;
     border-collapse: collapse;
     padding:20px;
-    font-size: 20px;;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     color: green;
+}
+
+@media (max-width:1000px){
+    input{
+        margin-left:10px;
+        font-size:10px;
+        border-radius: 2px;
+        background-color: rgb(233, 230, 230);
+    }
+    
+    h4{
+        margin-left:10px;
+    }
+    
+    
+    body{
+        
+        background-color:rgb(233, 230, 230);;
+    }
+    table{
+        
+        margin:auto;
+        margin-top:10px;
+    }
+    table,th,td{
+        border: 2px solid black;
+        border-collapse: collapse;
+        padding:10px;
+        font-size: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: green;
+    }
+
+
 }
